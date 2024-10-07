@@ -11,20 +11,19 @@ def productExceptSelf1(nums): # time limit exceed
     print(a)
 
 
-def productExceptSelf2(nums): # time limit exceed
+def productExceptSelf2(nums):  # pass
 
     res = [1]*len(nums)
     prefix = 1
     for i in range(len(nums)):
         res[i] = prefix
-        prefix*=nums[i]
+        prefix *= nums[i]
 
     postfix = 1
-    for j in range(len(nums)-1,-1,-1):
+    for j in range(len(nums)-1, -1, -1):
         res[j] *= postfix
-        postfix*=nums[j]
+        postfix *= nums[j]
     return res
-
 
 
 if __name__ == "__main__":
